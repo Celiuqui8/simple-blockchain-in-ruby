@@ -6,7 +6,7 @@ class Block
   def initialize(index, transactions, previous_hash)
     @index         		 	 = index
     @timestamp      	 	 = Time.now
-    @transactions 	 		 = transactions
+    @transactions 	 		 = transactions||[]
 		@transactions_count  = transactions.size
     @previous_hash 		 	 = previous_hash
     @nonce, @hash  		 	 = compute_hash_with_proof_of_work
